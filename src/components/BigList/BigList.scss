@@ -1,0 +1,42 @@
+.big-list-container {
+    width: 100%;
+    padding: 0 165px;
+    @media(max-width: 768px) {
+        padding: 0;   
+    }
+    h2 {
+        font-family: 'Montserrat',sans-serif;
+        color: #ffffff;
+        font-size: 20px;
+        font-weight: bold;
+        @media(max-width: 768px) {
+            padding-left: 14px;   
+        }
+    }
+}
+.big-card {
+    min-width: 242px;
+    min-height: 483.8px;
+    background-color: #000000;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-sizing: border-box;
+    @media(max-width: 768px) {
+        min-width: 163px;
+        min-height: 328px; 
+        margin: 1.5px;
+
+    }
+}
+.big-cards-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-top: 9.3px;
+    @media(max-width: 768px) {
+        justify-content: center;    
+    }
+    
+
+}
