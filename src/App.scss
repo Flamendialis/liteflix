@@ -6,4 +6,12 @@
 body {
   background-color: black;
 }
+a {
+  cursor: pointer; 
+  text-decoration: none;
+  color: inherit;
+  img{
+      display: block;
+  } 
+}
 

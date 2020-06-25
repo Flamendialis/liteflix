@@ -1,4 +1,4 @@
-#Liteflix
+# Liteflix
 
 Catálogo de Películas dinámico. Las películas se encuentran categorizadas y provienen de una API pública.
 

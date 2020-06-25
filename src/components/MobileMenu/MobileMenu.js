@@ -35,7 +35,7 @@ class MobileMenu extends React.Component {
                 </div>
                 <div id='sidebar' className='sidebar collapsed'>
                     <div className='mobile-menu-logo'>
-                        <a><img src={logo} alt='liteflix logo'/></a>
+                        <a href='#'><img src={logo} alt='liteflix logo'/></a>
                     </div>
                     <div className='mobile-user'>
                         <div className='avatar'>
@@ -43,19 +43,19 @@ class MobileMenu extends React.Component {
                         </div>
                         <p>Ernesto Garmendia</p>
                     </div>
-                    <div className='user-options'>
+                    <div className='mobile-user-options'>
                         <div>
-                            <a><p>Cambiar usuario</p></a>
+                            <a href='#'><p>Cambiar usuario</p></a>
                         </div>
                         <div>
-                            <a><p>Configuración</p></a>
+                            <a href='#'><p>Configuración</p></a>
                         </div>
                         <div>
-                            <a><p>Ayuda</p></a>
+                            <a href='#'><p>Ayuda</p></a>
                         </div>
                     </div>
                         <div className='news'>
-                            <a>
+                            <a href='#'>
                                 <div>
                                     <img src={bell} alt='bell' />
                                 </div>
@@ -63,17 +63,17 @@ class MobileMenu extends React.Component {
                             </a>
                         </div>
                     <div className='mobile-navbar'>
-                        <a><p>Series</p></a>
-                        <a><p>Pelícuas</p></a>
-                        <a><p>Mi lista</p></a>            
-                        <a><p>Niños</p></a>
+                        <a href='#'><p>Series</p></a>
+                        <a href='#'><p>Pelícuas</p></a>
+                        <a href='#'><p>Mi lista</p></a>            
+                        <a href='#'><p>Niños</p></a>
                     </div>
                     <div className='mobile-add-movie'>
                         <img src={plus} alt='add symbol' />
                         <p>Agregar película</p>
                     </div>
                     <div className='mobile-logout'>
-                        <a><p>Log Out</p></a>
+                        <a href='#'><p>Log Out</p></a>
                     </div>
                 </div>
             </div>

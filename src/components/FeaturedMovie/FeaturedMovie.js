@@ -16,7 +16,7 @@ class FeaturedMovie extends React.Component {
                     <div className='featured-title'>{this.props.title}</div>
                     <div className='featured-buttons-container'>
                         <button className='hero-btn'><img src={play} alt='play button' />Reproducir</button>
-                        <a><img src={addList} alt='add button'/></a>
+                        <a href='#'><img src={addList} alt='add button'/></a>
                         <button className='hero-btn'><img src={plus} alt='add button' />Mi Lista</button>
                     </div>
                     <div className='overview'>
