@@ -24,7 +24,7 @@ class App extends React.Component {
       .then(res => res.json())
       .then(
         (result) => {
-          this.setState({featuredMovie: result.results[5]});
+          this.setState({featuredMovie: result.results[0]});
         })
   }
   getUpcomingMovies() {

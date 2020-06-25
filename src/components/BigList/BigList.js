@@ -1,5 +1,8 @@
 import React from 'react';
 import './BigList.scss';
+import play from '../../assets/play.svg';
+import like from '../../assets/like.svg';
+import arrow from '../../assets/thin-arrow.svg';
 
 class BigCard extends React.Component {
     render() {
@@ -8,7 +11,57 @@ class BigCard extends React.Component {
         };
         return(
             <div className='big-card' style={background}>
-            </div>
+                <div className='big-card-content'>
+
+                    <div className='big-card-play'>
+                        <a href='#'>
+                            <div className='big-play-wrapper'>    
+                                <img src={play} alt='play button' />
+                            </div>
+                        </a>
+                    </div>
+
+                    <div className='big-card-info'>
+
+                        <div className='big-info-container'>
+                            <div className='big-card-title'>
+                                <p>Black Mirror</p>
+                            </div>
+                            <div className='big-card-specs'>    
+                                <div className='big-card-match'>
+                                    <p>98% Coincidencia</p>
+                                </div>
+                            </div>
+                            <div className='big-card-specs'>      
+                                <div className='big-card-age'>
+                                    <p>+16</p>
+                                </div>
+                                <div className='big-card-duration'>
+                                    <p>1h 30 min</p>
+                                </div>
+                            </div>
+                            <div className='big-card-genre'>
+                                <p>Suspenso</p>
+                            </div>
+                        </div>
+
+                        <a href='#'>
+                            <div className='big-like-wrapper'>
+                                <img src={like} alt='like button' />
+                            </div>
+                        </a>
+
+                    </div>
+
+                    <div className='big-card-arrow'>
+                        <a href='#'>
+                            <img src={arrow} alt='down arrow' />
+                        </a>
+                    </div>
+
+
+                </div>        
+            </div>    
         );
     }
 }

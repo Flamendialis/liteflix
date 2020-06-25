@@ -1,11 +1,11 @@
 .big-list-container {
     width: 100%;
     padding: 0 165px;
+    font-family: 'Montserrat', sans-serif;
     @media(max-width: 768px) {
         padding: 0;   
     }
     h2 {
-        font-family: 'Montserrat',sans-serif;
         color: #ffffff;
         font-size: 20px;
         font-weight: bold;
@@ -29,6 +29,99 @@
 
     }
 }
+.big-card-content {
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), #000000 82%);
+    display: flex;   
+    flex-direction: column;
+    color: #ffffff;
+    padding: 12px;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+    @media(min-width:769px){
+        &:hover {
+            opacity: 1;
+        }
+    }
+    .big-card-play {
+        width: 100%;
+        display: flex;
+        flex: 1;
+        align-items: flex-end;
+        .big-play-wrapper {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1.4px solid #ffffff;
+            border-radius: 50%;
+            margin-bottom: 7px;
+            img {
+                width: 15px;
+                height: 19px;
+            }
+        }
+    }
+    .big-card-info {
+        display: flex;
+        align-items: center;
+        .big-info-container{
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+            .big-card-specs {
+                div {
+                    margin-right: 5px;
+                }
+            }
+            .big-card-title {
+                font-size: 16px;
+                font-weight: bold;
+            }
+            .big-card-specs {
+                display: flex;
+                font-size: 12px;
+                .big-card-age {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border-radius: 12px;
+                    width: 30px;
+                    height: 16px;
+                    background-color: #9b9b9b;
+                    padding: 0.5px 1.5px;
+                    
+                }
+            }
+        }
+        .big-like-wrapper{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 32px;
+            height: 32px;
+            border: 1.4px solid #ffffff;
+            border-radius: 50%;
+            img {
+                width: 15px;
+                height: 14px;
+            }
+        }
+    }
+    .big-card-arrow {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+        margin-bottom: 9px;
+        img{
+            width: 42.7px;
+            height: 21.4px;
+        }
+    }
+}
 .big-cards-container {
     display: flex;
     justify-content: space-between;
@@ -36,7 +129,6 @@
     padding-top: 9.3px;
     @media(max-width: 768px) {
         justify-content: center;    
-    }
-    
+    } 
 
 }
