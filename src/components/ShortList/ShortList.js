@@ -5,6 +5,8 @@ import like from '../../assets/like.svg';
 import add from '../../assets/add-list.svg';
 import arrow from '../../assets/thin-arrow.svg';
 
+var categories =require('../../categories/categories.json')
+
 class ShortCard extends React.Component {
     render() {
         const background = {
@@ -33,7 +35,7 @@ class ShortCard extends React.Component {
                     <div className='short-card-info'>
                         <div className='info-container'>
                             <div className='short-card-title'>
-                                <p>Black Mirror</p>
+                                <p>{this.props.title}</p>
                             </div>
                             <div className='short-card-specs'>    
                                 <div className='short-card-match'>
@@ -47,7 +49,11 @@ class ShortCard extends React.Component {
                                 </div>
                             </div>
                             <div className='short-card-genre'>
-                                <p>Suspenso</p>
+                                <p>
+                                    {
+                                        categories.genres.filter(cat => cat.id === this.props.category)[0].name
+                                    }
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -75,6 +81,8 @@ class ShortList extends React.Component {
                             movie => 
                             <ShortCard 
                                 background={movie.backdrop_path}
+                                title={movie.title}
+                                category={movie.genre_ids[0]}
                             />
                         )
                     }

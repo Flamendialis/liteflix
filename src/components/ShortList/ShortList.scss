@@ -75,7 +75,6 @@
     width: 100%;
     display: flex;
     justify-content: center;
-    margin-bottom: -5px;
     .play-wrapper {
         width: 40px;
         height: 40px;
@@ -104,6 +103,9 @@
         .short-card-title {
             font-size: 16px;
             font-weight: bold;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
         }
         .short-card-specs {
             display: flex;

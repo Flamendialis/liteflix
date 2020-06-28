@@ -4,6 +4,8 @@ import play from '../../assets/play.svg';
 import like from '../../assets/like.svg';
 import arrow from '../../assets/thin-arrow.svg';
 
+var categories = require('../../categories/categories.json');
+
 class BigCard extends React.Component {
     render() {
         const background = {
@@ -25,7 +27,7 @@ class BigCard extends React.Component {
 
                         <div className='big-info-container'>
                             <div className='big-card-title'>
-                                <p>Black Mirror</p>
+                                <p>{this.props.title}</p>
                             </div>
                             <div className='big-card-specs'>    
                                 <div className='big-card-match'>
@@ -41,7 +43,11 @@ class BigCard extends React.Component {
                                 </div>
                             </div>
                             <div className='big-card-genre'>
-                                <p>Suspenso</p>
+                                <p>
+                                    {
+                                        categories.genres.filter(cat => cat.id === this.props.category)[0].name
+                                    }
+                                </p>
                             </div>
                         </div>
 
@@ -67,6 +73,7 @@ class BigCard extends React.Component {
 }
 
 class BigList extends React.Component {
+    
     render() {
         return(
             <div className='big-list-container'>
@@ -77,6 +84,8 @@ class BigList extends React.Component {
                             movie => 
                             <BigCard 
                                 background={movie.poster_path}
+                                title={movie.title}
+                                category={movie.genre_ids[0]}
                             />
                         )
                     }

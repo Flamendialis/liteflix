@@ -5,6 +5,7 @@ import FeaturedMovie from './components/FeaturedMovie'
 import ShortList from './components/ShortList'
 import BigList from './components/BigList'
 import MobileMenu from './components/MobileMenu'
+import UploadModal from './components/UploadModal'
 
 class App extends React.Component {
   constructor(props) {
@@ -14,10 +15,12 @@ class App extends React.Component {
       upcomingMovies: [],
       myMovies: [],
       popularMovies: [],
+      showModal: false
     }
     this.getFeaturedMovie = this.getFeaturedMovie.bind(this);
     this.getPopularMovies = this.getPopularMovies.bind(this);
     this.getUpcomingMovies = this.getUpcomingMovies.bind(this);
+    this.toggleModal = this.toggleModal.bind(this);
   }
   getFeaturedMovie() {
     fetch("https://api.themoviedb.org/3/movie/now_playing?api_key=6f26fd536dd6192ec8a57e94141f8b20")
@@ -51,14 +54,20 @@ class App extends React.Component {
     this.getUpcomingMovies();
     this.getPopularMovies();
   }
-  
-
-
+  toggleModal() {
+    if(this.state.showModal){
+      this.setState({showModal: false});
+    }
+    else {
+      this.setState({showModal: true});
+    }
+  }
   render() {
     return (
       <div>
-        <Header />
-        <MobileMenu />
+        <Header openModal={this.toggleModal} />
+        <MobileMenu openModal={this.toggleModal} />
+        { this.state.showModal && <UploadModal closeModal={this.toggleModal} /> }
         <FeaturedMovie 
           title = {this.state.featuredMovie.title}
           background ={this.state.featuredMovie.backdrop_path}

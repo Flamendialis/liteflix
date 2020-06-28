@@ -41,7 +41,7 @@ class Header extends React.Component {
                         <a href='#'><li className='nav-item'>Mi lista</li></a>
                     </ul>
                 </nav>
-                <div className='add-movie'>
+                <div className='add-movie' onClick={this.props.openModal}>
                     <img src={plus} alt='plus symbol' />
                     <p>Agregar película</p> 
                 </div>

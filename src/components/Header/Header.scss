@@ -129,9 +129,15 @@
 .user-menu-container {
     position: relative;
     color: #000000;
+    &:hover {
+        .user-menu {
+            display: flex;
+        }
+    }
     .user-menu {
         position: absolute;
         right: -21px;
+        transition: all 3s ease-in-out;
         width: 130px;
         height: 218px;
         border-radius: 5px;
@@ -169,11 +175,7 @@
             color: #9b9b9b;
         }
     }
-    &:hover {
-        .user-menu {
-            display: flex;
-        }
-    }
+    
 }
 .circled-avatar {
     margin: 8px;

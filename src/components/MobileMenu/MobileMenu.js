@@ -13,6 +13,7 @@ class MobileMenu extends React.Component {
             collapsed: true
         }
         this.collapseSidebar = this.collapseSidebar.bind(this);
+        this.openModalCloseMenu = this.openModalCloseMenu.bind(this);
     }
     collapseSidebar() {
         if(!this.state.collapsed) {
@@ -23,8 +24,12 @@ class MobileMenu extends React.Component {
             document.getElementById('sidebar').classList.remove('collapsed');
             this.setState({ collapsed: false });
 
-        }  
+        }
     }
+        openModalCloseMenu(){
+            this.props.openModal();
+            this.collapseSidebar();
+        }  
     render() {
         return(
             <div className='mobile-menu-container'>
@@ -68,7 +73,7 @@ class MobileMenu extends React.Component {
                         <a href='#'><p>Mi lista</p></a>            
                         <a href='#'><p>Niños</p></a>
                     </div>
-                    <div className='mobile-add-movie'>
+                    <div className='mobile-add-movie' onClick={this.openModalCloseMenu}>
                         <img src={plus} alt='add symbol' />
                         <p>Agregar película</p>
                     </div>
