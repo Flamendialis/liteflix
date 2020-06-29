@@ -1,6 +1,6 @@
 .short-list-container {
     width: 100%;
-    padding: 0 165px;
+    padding: 0 156.5px;
     font-family: 'Montserrat', sans-serif;
     @media(max-width: 768px) {
         padding: 0;    
@@ -9,6 +9,7 @@
         color: #ffffff;
         font-size: 20px;
         font-weight: bold;
+        padding: 0 8.5px;
         @media(max-width: 768px) {
             padding: 0 0 4px 15px;    
         }
@@ -22,6 +23,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     box-sizing: border-box;
+    margin: 5px 8.5px;
     @media(max-width: 768px) {
        margin: 5px 0;
        min-width: 330.7px;
@@ -137,11 +139,11 @@
 }
 .short-cards-container {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     flex-wrap: wrap;
+    width: 100%;
     padding-top: 20.3px;
     padding-bottom: 40.7px;
-    width: 100%;
     @media(max-width: 768px) {
         justify-content: center;
         padding-top: 4px;

@@ -1,6 +1,6 @@
 .big-list-container {
     width: 100%;
-    padding: 0 165px;
+    padding: 0 168px;
     font-family: 'Montserrat', sans-serif;
     @media(max-width: 768px) {
         padding: 0;   
@@ -15,16 +15,17 @@
     }
 }
 .big-card {
-    min-width: 242px;
-    min-height: 483.8px;
+    width: 242px;
+    height: 483.8px;
     background-color: #000000;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     box-sizing: border-box;
+    margin: 5px 0;
     @media(max-width: 768px) {
-        min-width: 163px;
-        min-height: 328px; 
+        width: 163px;
+        height: 328px; 
         margin: 1.5px;
 
     }

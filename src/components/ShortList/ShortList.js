@@ -12,8 +12,11 @@ class ShortCard extends React.Component {
         const background = {
             backgroundImage: "url('https://image.tmdb.org/t/p/w300" + this.props.background +"')"
         };
+        const localBackground = {
+            backgroundImage: "url(" + this.props.poster +")"
+        }
         return(
-            <div className='short-card' style={background}>
+            <div className='short-card' style={this.props.local ? localBackground : background}>
                 <div className='short-card-content'>
                     <div className='short-card-buttons'>
                         <a href='#'>
@@ -75,17 +78,22 @@ class ShortList extends React.Component {
                 <div>
                     <h2>{this.props.title}</h2>
                 </div>
-                <div className='short-cards-container'>
-                    {
-                        this.props.moviesList.map(
-                            movie => 
-                            <ShortCard 
-                                background={movie.backdrop_path}
-                                title={movie.title}
-                                category={movie.genre_ids[0]}
-                            />
-                        )
-                    }
+                <div className='short-container-wrapper'>
+                    <div className='short-cards-container'>
+                        {
+                            this.props.moviesList.map(
+                                movie => 
+                                <ShortCard 
+                                    key={movie.title}
+                                    background={movie.backdrop_path}
+                                    title={movie.title}
+                                    category={movie.genre_ids[0]}
+                                    poster ={movie.poster}
+                                    local={this.props.local}
+                                />
+                            )
+                        }
+                    </div>
                 </div>
             </div>
         );

@@ -83,6 +83,7 @@ class BigList extends React.Component {
                         this.props.moviesList.map(
                             movie => 
                             <BigCard 
+                                key={movie.title}
                                 background={movie.poster_path}
                                 title={movie.title}
                                 category={movie.genre_ids[0]}
